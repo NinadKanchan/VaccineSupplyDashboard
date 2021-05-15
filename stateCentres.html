@@ -60,10 +60,60 @@
         chart.geodata = am4geodata_worldLow;
         chart.projection = new am4maps.projections.Miller();
         chart.homeZoomLevel = 6;
+        if (selectedValue==1){
         chart.homeGeoPoint = {
             latitude: 20.5937,
             longitude: 78.9629
         };
+      }
+      if (selectedValue==2){
+      chart.homeGeoPoint = {
+          latitude: 20.5937,
+          longitude: 78.9629
+      };
+    }if (selectedValue==3){
+    chart.homeGeoPoint = {
+        latitude: 20.5937,
+        longitude: 78.9629
+    };
+  }if (selectedValue==4){
+  chart.homeGeoPoint = {
+      latitude: 20.5937,
+      longitude: 78.9629
+  };
+}if (selectedValue==5){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}if (selectedValue==6){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}if (selectedValue==7){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}if (selectedValue==8){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}
+if (selectedValue==9){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}
+if (selectedValue==10){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}
 
         // Create map polygon series
         var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -115,6 +165,33 @@
             var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
           }
           else if (selectedValue==5) {
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+          }
+          else if (selectedValue==6) {
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+          }else if (selectedValue==7) {
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+          }else if (selectedValue==8) {
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+          }else if (selectedValue==9) {
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+          }
+          else if (selectedValue==10) {
             var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
             var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
             var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
@@ -428,11 +505,18 @@
                                 <h3 class="box-title mb-0">Centres Around State</h3>
                                 <div class="col-md-3 col-sm-4 col-xs-6 ms-auto">
                                     <select class="form-select shadow-none row border-top" id="myselect" onclick="mystates();">
-                                        <option value='1'>Maharashtra</option>
-                                        <option value='2'>Gujrat</option>
-                                        <option value='3'>Delhi</option>
-                                        <option value='4'>Punjab</option>
-                                        <option value='5'>Rajasthan</option>
+                                        <option value='1'>Andhra Pradesh</option>
+                                        <option value='2'>Arunachal Pradesh</option>
+                                        <option value='3'>Assam</option>
+                                        <option value='4'>Bihar</option>
+                                        <option value='5'>Chattisgarh</option>
+                                        <option value='6'>Goa</option>
+                                        <option value='7'>Gujrat</option>
+                                        <option value='8'>Haryana</option>
+                                        <option value='9'>Himachal Pradesh</option>
+                                        <option value='10'>Jharkhand</option>
+
+
                                     </select>
                                 </div>
                             </div>

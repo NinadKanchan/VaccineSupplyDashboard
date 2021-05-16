@@ -59,53 +59,47 @@
         var chart = am4core.create("chartdiv", am4maps.MapChart);
         chart.geodata = am4geodata_worldLow;
         chart.projection = new am4maps.projections.Miller();
-        chart.homeZoomLevel = 30;
+        chart.homeZoomLevel = 6;
         if (selectedValue==1){
         chart.homeGeoPoint = {
             latitude: 20.5937,
             longitude: 78.9629
         };
       }
-        if (selectedValue==2){
+      if (selectedValue==2){
       chart.homeGeoPoint = {
           latitude: 20.5937,
           longitude: 78.9629
       };
-    }
-    if (selectedValue==3){
+    }if (selectedValue==3){
     chart.homeGeoPoint = {
         latitude: 20.5937,
         longitude: 78.9629
     };
-  }
-  if (selectedValue==4){
+  }if (selectedValue==4){
   chart.homeGeoPoint = {
-      latitude: 25.8560,
-      longitude:85.7868
+      latitude: 20.5937,
+      longitude: 78.9629
   };
-}
-  if (selectedValue==5){
-    chart.homeGeoPoint = {
-      latitude: 21.1124,
-      longitude: 82.0960
-};
-}
-if (selectedValue==6){
-chart.homeGeoPoint = {
-    latitude: 15.2993,
-    longitude:74.1240
-};
-}
-if (selectedValue==7){
+}if (selectedValue==5){
 chart.homeGeoPoint = {
     latitude: 20.5937,
     longitude: 78.9629
 };
-}
-if (selectedValue==8){
+}if (selectedValue==6){
 chart.homeGeoPoint = {
-    latitude: 29.3255,
-    longitude: 76.2998
+    latitude: 20.5937,
+    longitude: 78.9629
+};
+}if (selectedValue==7){
+chart.homeGeoPoint = {
+    latitude: 22.3072,
+    longitude: 73.1812
+};
+}if (selectedValue==8){
+chart.homeGeoPoint = {
+    latitude: 20.5937,
+    longitude: 78.9629
 };
 }
 if (selectedValue==9){
@@ -133,9 +127,9 @@ chart.homeGeoPoint = {
         cities.mapImages.template.nonScaling = true;
 
         var city = cities.mapImages.template.createChild(am4core.Circle);
-        city.radius = 5;
+        city.radius = 6;
         city.fill = chart.colors.getIndex(0).brighten(-0.2);
-        city.strokeWidth = 1;
+        city.strokeWidth = 2;
         city.stroke = am4core.color("#fff");
 
         function addCity(coords, title) {
@@ -165,112 +159,86 @@ chart.homeGeoPoint = {
             var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
           }
           else if (selectedValue==4) {
-            var samastipur = addCity({ "latitude":25.8560 , "longitude":85.7868}, "samastipur");
-            var Araria  = addCity({ "latitude":26.1325 , "longitude":87.4528}, "Araria ");
-            var Arwal = addCity({ "latitude":25.2428 , "longitude": 84.6656}, "Arwal");
-            var  Aurangabad = addCity({ "latitude":24.7033 , "longitude":84.3542}, "Aurangabad ");
-            var  Banka= addCity({ "latitude":24.8874 , "longitude": 86.9198}, "Banka");
-            var  Begusarai= addCity({ "latitude":25.4182 , "longitude":86.1272}, "Begusarai");
-            var  Bhagalpur= addCity({ "latitude":25.2425 , "longitude":86.9842}, "Bhagalpur");
-            var  Bhojpur = addCity({ "latitude":25.4662 , "longitude":84.5222}, "Bhojpur ");
-            var  Buxar= addCity({ "latitude":25.5647 , "longitude": 83.9777}, "Buxar");
-            var  Darbhanga= addCity({ "latitude":26.1542 , "longitude":85.8918}, "Darbhanga");
-            var  Champaran= addCity({ "latitude":26.6438 , "longitude":84.9040}, "Champaran ");
-            var  Gaya = addCity({ "latitude": 24.7914, "longitude":85.0002}, "Gaya ");
-            var  Gopalganj= addCity({ "latitude": 26.4832, "longitude":84.4366}, "Gopalganj");
-            var  Jamui = addCity({ "latitude":24.9195 , "longitude":86.2247}, "Jamui");
-            var  Jehanabad = addCity({ "latitude":25.2133 , "longitude": 84.9853}, "Jehanabad ");
-            var  Katihar= addCity({ "latitude":25.5541 , "longitude":87.5591}, "Katihar");
-            var Khagaria  = addCity({ "latitude": 25.5045, "longitude":86.4701}, "Khagaria ");
-            var Lakhisarai = addCity({ "latitude":25.1571 , "longitude":86.0952}, "Lakhisarai");
-            var  Madhepura = addCity({ "latitude":25.9240 , "longitude":86.7946}, "Madhepura ");
-            var  Madhubani= addCity({ "latitude":26.3483 , "longitude":86.0712}, "Madhubani");
-            var Munger   = addCity({ "latitude":25.3708 , "longitude":86.4734}, "Munger ");
-            var Muzaffarpur = addCity({ "latitude":26.1197 , "longitude": 85.3910}, "Muzaffarpur");
-            var  Nalanda = addCity({ "latitude": 25.2622, "longitude":85.4788}, "Nalanda ");
-            var  Nawada = addCity({ "latitude": 24.8867, "longitude":85.5435}, "Nawada ");
-            var  Patna = addCity({ "latitude":25.5941 , "longitude": 85.1376}, "Patna ");
-            var  Rohtas= addCity({ "latitude":25.0686 , "longitude":84.0167}, "Rohtas");
-            var Saharsa = addCity({ "latitude":25.8774 , "longitude":86.5928}, "Saharsa");
-            var  Samastipur = addCity({ "latitude": 25.8560, "longitude":85.7868}, "Samastipur ");
-            var  Saran = addCity({ "latitude":25.7765 , "longitude": 84.7381}, "Saran ");
-            var  Sheikhpura= addCity({ "latitude":25.1417 , "longitude":85.8629}, "Sheikhpura");
-            var  Sheohar= addCity({ "latitude": 26.5146, "longitude": 85.2942}, "Sheohar");
-            var Sitamarhi = addCity({ "latitude":26.5887 , "longitude":85.5013}, "Sitamarhi");
-            var  Siwan= addCity({ "latitude":26.2243 , "longitude": 84.3600}, "Siwan ");
-            var  Supaul= addCity({ "latitude":26.1234 , "longitude":86.6045}, "Supaul");
-            var  Vaishali = addCity({ "latitude":25.6838 , "longitude": 85.3550}, "Vaishali");
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
           }
           else if (selectedValue==5) {
-            var balod = addCity({ "latitude": 20.7271, "longitude":81.2056 }, "Balod");
-            var  baloda_Bazar= addCity({ "latitude": 21.6569, "longitude":82.1592 }, "Baloda Bazar");
-            var  balrampur= addCity({ "latitude": 23.6112, "longitude":83.6109 }, "Balrampur");
-            var  bastar= addCity({ "latitude":19.2073 , "longitude":81.9339 }, "Bastar ");
-            var  bemetara= addCity({ "latitude":21.7140 , "longitude":81.5356 }, "Bemetara");
-            var  bijaipur= addCity({ "latitude":18.7977 , "longitude": 80.8129 }, "Bijaipur");
-            var  bilaspur= addCity({ "latitude": 22.0797, "longitude":82.1409 }, "Bilaspur");
-            var  dantewada= addCity({ "latitude":18.8456 , "longitude":81.3839 }, "Dantewada");
-            var  dhamtari = addCity({ "latitude":20.7015 , "longitude":81.5542 }, "Dhamtari");
-            var  durg= addCity({ "latitude":21.1623 , "longitude":81.4279 }, "Durg");
-            var  gariyaband= addCity({ "latitude":20.6348 , "longitude":82.0615 }, "Gariyaband");
-            var  janjgir= addCity({ "latitude":21.9706 , "longitude":82.4753 }, "Janjgir");
-            var  jashpur_Nagar= addCity({ "latitude": 22.8759, "longitude": 84.1381}, "Jashpur Nagar");
-            var  kawardha = addCity({ "latitude": 22.0106, "longitude": 81.2359 }, "Kawardha");
-            var  kanker= addCity({ "latitude":20.6 , "longitude":80.48 }, "Kanker");
-            var  kondagaon = addCity({ "latitude":19.5959 , "longitude":81.6638 }, "Kondagaon ");
-            var  korba= addCity({ "latitude":22.3595 , "longitude":82.7501 }, "Korba");
-            var  korea= addCity({ "latitude":23.3875 , "longitude":82.3886 }, "Korea");
-            var  mahasamund= addCity({ "latitude":21.1124 , "longitude":82.0960 }, "Mahasamund");
-            var  mungeli= addCity({ "latitude":	22.068542 , "longitude":	81.685684 }, "Mungeli");
-            var  narayanpur = addCity({ "latitude":19.723535 , "longitude":81.242411 }, "Narayanpur ");
-            var  raigarh= addCity({ "latitude":21.1124 , "longitude": 82.0960},"Raigarh");
-            var  raipur = addCity({ "latitude": 21.1124, "longitude":82.0960 }, "Raipur ");
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
           }
           else if (selectedValue==6) {
-            var North_goa = addCity({ "latitude": 15.5163, "longitude":73.9830 }, "North Goa");
-            var South_goa= addCity({ "latitude": 15.1177, "longitude": 74.12408 }, "South Goa");
+            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
+            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
+            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
+            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
           }
           else if (selectedValue==7) {
-            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
-            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
-            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
-            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
-          }
-          else if (selectedValue==8) {
-            var  ambala= addCity({ "latitude":30.3752, "longitude":76.7821}, "Ambala");
-            var  bhiwani= addCity({ "latitude":28.7975, "longitude":76.1322}, "Bhiwani");
-            var  Ccarkhi_Dadri= addCity({ "latitude":28.5921, "longitude":76.2653}, "Charkhi Dadri");
-            var  faridabad= addCity({ "latitude":28.4089, "longitude":77.3178}, "Faridabad");
-            var  fatehabad= addCity({ "latitude":29.5132, "longitude":75.4510}, "Fatehabad");
-            var gurugram = addCity({ "latitude":28.4595, "longitude":77.0266}, "Gurugram");
-            var  Hisar = addCity({ "latitude":29.1492, "longitude":75.7217}, "Hisar");
-            var  Jhajjar = addCity({ "latitude":28.6055, "longitude":76.6538}, "Jhajjar ");
-            var  Jind = addCity({ "latitude":29.3255, "longitude":76.2998}, "Jind ");
-            var  Kaithal= addCity({ "latitude":29.8043, "longitude":76.4039}, "Kaithal");
-            var  Karnal = addCity({ "latitude":29.6857, "longitude": 76.9905}, "Karnal");
-            var  Kurukshetra = addCity({ "latitude":29.9695, "longitude":76.8783}, "Kurukshetra ");
-            var Mahendragarh  = addCity({ "latitude":28.2734, "longitude": 76.1401}, "Mahendragarh ");
-            var  Nuh = addCity({ "latitude":28.1024, "longitude": 76.9931}, "Nuh ");
-            var  Palwal = addCity({ "latitude":28.1473, "longitude":77.3260}, "Palwal ");
-            var  Panchkula= addCity({ "latitude":30.6942, "longitude":76.8606}, "Panchkula");
-            var Panipat = addCity({ "latitude":29.3909, "longitude":76.9635}, "Panipat");
-            var  Rewari= addCity({ "latitude":28.1920, "longitude":76.6191}, "Rewari");
-            var  Rohtak= addCity({ "latitude":28.8955, "longitude":76.6066}, "Rohtak");
-            var  Sirsa= addCity({ "latitude":29.5321, "longitude":75.0318}, "Sirsa");
-            var  Sonipat = addCity({ "latitude":28.9931, "longitude":77.0151}, "Sonipat ");
-            var  Yamunanagar= addCity({ "latitude":30.1290, "longitude":77.2674}, "Yamunanagar");
+            var Ahmedabad = addCity({ "latitude": 23.0225, "longitude":72.5714 }, "Ahmedabad");
+            var Amreli = addCity({ "latitude": 21.6015, "longitude":71.2204 }, "Amreli");
+            var Anand = addCity({ "latitude": 22.5645, "longitude":72.9289}, "Anand");
+            var Aravalli = addCity({ "latitude": 25.2235, "longitude":73.7478 }, "Aravalli");
+            var Banaskantha = addCity({ "latitude": 24.3455, "longitude":71.7622 }, "Banaskantha");
+            var Bharuch = addCity({ "latitude": 21.7051, "longitude":72.9959 }, "Bharuch");
+            var Bhavnagar = addCity({ "latitude": 21.7645, "longitude":72.1519 }, "Bhavnagar");
+            var Botad = addCity({ "latitude": 22.1723, "longitude":71.6636 }, "Botad");
+            var ChhotaUdepur = addCity({ "latitude": 22.3085, "longitude":74.0120 }, "Chhota Udepur");
+            var Dahod = addCity({ "latitude": 22.8345, "longitude":74.2606 }, "Dahod");
+            var Dangs  = addCity({ "latitude": 20.8254, "longitude":73.7007 }, "Dangs");
+            var DevbhoomiDwarka = addCity({ "latitude": 22.1232, "longitude":69.3831 }, "Devbhoomi Dwarka");
+            var Gandhinagar = addCity({ "latitude": 23.2156, "longitude":72.6369 }, "Gandhinagar");
+            var Junagadh = addCity({ "latitude": 21.5222, "longitude":70.4579 }, "Junagadh");
+            var Kachchh = addCity({ "latitude": 23.7337, "longitude":69.8597 }, "Kachchh");
+            var Kheda = addCity({ "latitude": 22.7507, "longitude":72.6847 }, "Kheda");
+            var Mahisagar = addCity({ "latitude": 23.1711, "longitude":73.5594 }, "Mahisagar");
+            var Mehsana = addCity({ "latitude": 23.5880, "longitude":72.3693 }, "Mehsana");
+            var Porbandar = addCity({ "latitude": 21.6417, "longitude":69.6293 }, "Porbandar");
+            var Rajkot = addCity({ "latitude": 22.3039, "longitude":70.8022}, "Rajkot");
+            var Sabarkantha = addCity({ "latitude": 23.8477, "longitude":72.9933 }, "Sabarkantha");
+            var Surat = addCity({ "latitude": 21.1702, "longitude":72.8311 }, "Surat");
+            var Surendranagar = addCity({ "latitude": 22.7739, "longitude":71.6673}, "Surendranagar");
+            var Tapi = addCity({ "latitude": 21.2789, "longitude":73.6065 }, "Tapi");
+            var Vadodara = addCity({ "latitude": 22.3072, "longitude":73.1812}, "Vadodara");
+            var Valsad = addCity({ "latitude": 20.5992, "longitude":72.9342}, "Valsad");
+            
+
+            
           }
           else if (selectedValue==9) {
-            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
-            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
-            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
-            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+            var Bilaspur = addCity({ "latitude": 31.3407, "longitude":76.6875 }, "Bilaspur");
+            var Chamba = addCity({ "latitude": 32.7573, "longitude":76.1784 }, "Chamba");
+            var Hamirpur = addCity({ "latitude": 31.6862, "longitude":76.5213 }, "Hamirpur");
+            var Kangra = addCity({ "latitude": 32.0998, "longitude":76.2691 }, "Kangra");
+            var Kinnaur = addCity({ "latitude": 31.6510, "longitude":78.4752 }, "Kinnaur");
+            var Kullu = addCity({ "latitude": 31.9592, "longitude":77.1089 }, "Kullu");
+            var Mandi = addCity({ "latitude": 31.7087, "longitude":76.9320 }, "Mandi");
+            var Shimla = addCity({ "latitude": 31.1048, "longitude":77.1734 }, "Shimla");
+            var Sirmaur  = addCity({ "latitude": 30.5628, "longitude":77.4702 }, "Sirmaur ");
+
+            
           }
           else if (selectedValue==10) {
-            var paris = addCity({ "latitude": 16.5131, "longitude":80.5165 }, "Paris");
-            var toronto = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Toronto");
-            var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
-            var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+            var Bokaro = addCity({ "latitude": 23.6693, "longitude":86.1511 }, "Bokaro");
+            var Deoghar = addCity({ "latitude": 24.4852, "longitude":86.6948 }, "Deoghar");
+            var Chatra = addCity({ "latitude":24.2065, "longitude":84.8718 }, "Chatra");
+            var Dhanbad = addCity({ "latitude": 23.7957, "longitude":86.4304 }, "Dhanbad");
+            var Dumka = addCity({ "latitude": 24.2685, "longitude":87.2488 }, "Dumka");
+            var EastSinghbhum = addCity({ "latitude": 22.4867, "longitude":86.4997 }, "East Singhbhum");
+            var Garhwa = addCity({ "latitude": 24.1549, "longitude":83.7996 }, "Garhwa");
+            var Giridih = addCity({ "latitude": 24.1913, "longitude":86.2996 }, "Giridih");
+            var Gumla  = addCity({ "latitude": 23.0441, "longitude":84.5379 }, "Gumla  ");
+            var Hazaribag  = addCity({ "latitude": 23.9925, "longitude":85.3637 }, "Hazaribag ");
+            var Jamtara  = addCity({ "latitude": 23.9505, "longitude":86.8170 }, "Jamtara  ");
+            var Khunti = addCity({ "latitude": 23.0798, "longitude":85.2774 }, "Khunti ");
+            var Koderma  = addCity({ "latitude": 24.4677, "longitude":85.5934 }, "Koderma ");
+            var Ranchi = addCity({ "latitude": 23.3441, "longitude":85.3096 }, "Ranchi ");
+            var Sahibganj  = addCity({ "latitude": 25.2381, "longitude":87.6454 }, "Sahibganj");
+            var WestSinghbhum  = addCity({ "latitude": 22.3651, "longitude":85.4376}, "West Singhbhum  ");
+            
+            
           }
 
 
@@ -281,7 +249,7 @@ chart.homeGeoPoint = {
         lineSeries.mapLines.template.line.strokeOpacity = 0.5;
         lineSeries.mapLines.template.line.stroke = city.fill;
         lineSeries.mapLines.template.line.nonScalingStroke = true;
-        lineSeries.mapLines.template.line.strokeDasharray = "0.1,0.1";
+        lineSeries.mapLines.template.line.strokeDasharray = "1,1";
         lineSeries.zIndex = 10;
 
         var shadowLineSeries = chart.series.push(new am4maps.MapLineSeries());
@@ -293,101 +261,71 @@ chart.homeGeoPoint = {
         function addLine(from, to) {
             var line = lineSeries.mapLines.create();
             line.imagesToConnect = [from, to];
-            line.line.controlPointDistance = -0.1;
+            line.line.controlPointDistance = -0.3;
 
             var shadowLine = shadowLineSeries.mapLines.create();
             shadowLine.imagesToConnect = [from, to];
 
             return line;
         }
-        if (selectedValue==4){
-          addLine(samastipur,Araria);
-          addLine(samastipur,Arwal);
-          addLine(samastipur,Aurangabad);
-          addLine(samastipur,Banka);
-          addLine(samastipur,Begusarai);
-          addLine(samastipur,Bhagalpur);
-          addLine(samastipur,Bhojpur);
-          addLine(samastipur,Buxar);
-          addLine(samastipur,Darbhanga);
-          addLine(samastipur,Champaran);
-          addLine(samastipur,Gaya);
-          addLine(samastipur,Gopalganj);
-          addLine(samastipur,Jamui);
-          addLine(samastipur,Jehanabad);
-          addLine(samastipur,Katihar);
-          addLine(samastipur,Khagaria);
-          addLine(samastipur,Lakhisarai);
-          addLine(samastipur,Madhepura);
-          addLine(samastipur,Madhubani);
-          addLine(samastipur,Munger);
-          addLine(samastipur,Muzaffarpur);
-          addLine(samastipur,Nalanda);
-          addLine(samastipur,Nawada);
-          addLine(samastipur,Patna);
-          addLine(samastipur,Rohtas);
-          addLine(samastipur,Saharsa);
-          addLine(samastipur,Samastipur);
-          addLine(samastipur,Saran);
-          addLine(samastipur,Sheikhpura);
-          addLine(samastipur,Sheohar);
-          addLine(samastipur,Sitamarhi);
-          addLine(samastipur,Siwan);
-          addLine(samastipur,Supaul);
-          addLine(samastipur,Vaishali);
-
+        if(selectedValue==7){ 
+        addLine(Vadodara,Ahmedabad);
+        addLine(Vadodara,Amreli);
+        addLine(Vadodara,Anand);
+        addLine(Vadodara,Aravalli);
+        addLine(Vadodara,Banaskantha);
+        addLine(Vadodara,Bharuch);
+        addLine(Vadodara,Bhavnagar);
+        addLine(Vadodara,Botad);
+        addLine(Vadodara,ChhotaUdepur);
+        addLine(Vadodara,Dahod);
+        addLine(Vadodara,Dangs);
+        addLine(Vadodara,DevbhoomiDwarka);
+        addLine(Vadodara,Gandhinagar);
+        addLine(Vadodara,Junagadh);
+        addLine(Vadodara,Kachchh);
+        addLine(Vadodara,Kheda);
+        addLine(Vadodara,Mahisagar);
+        addLine(Vadodara,Mehsana);
+        addLine(Vadodara,Porbandar);
+        addLine(Vadodara,Rajkot);
+        addLine(Vadodara,Sabarkantha);
+        addLine(Vadodara,Surat);
+        addLine(Vadodara,Surendranagar);
+        addLine(Vadodara,Tapi);
+        addLine(Vadodara,Valsad);
+        
+        }
+        else if (selectedValue==9){
+            addLine(Mandi,Bilaspur);
+            addLine(Mandi,Chamba);
+            addLine(Mandi,Hamirpur);
+            addLine(Mandi,Kangra);
+            addLine(Mandi,Kinnaur);
+            addLine(Mandi,Kullu);
+            addLine(Mandi,Shimla);
+            addLine(Mandi,Sirmaur);
 
         }
-        if (selectedValue==5){
-        addLine(raipur,balod);
-        addLine(raipur,baloda_Bazar);
-        addLine(raipur,balrampur);
-        addLine(raipur,bastar);
-        addLine(raipur,bemetara);
-        addLine(raipur,bijaipur);
-        addLine(raipur,bilaspur);
-        addLine(raipur,dantewada);
-        addLine(raipur,dhamtari);
-        addLine(raipur,durg);
-        addLine(raipur,gariyaband);
-        addLine(raipur,janjgir);
-        addLine(raipur,jashpur_Nagar);
-        addLine(raipur,kawardha);
-        addLine(raipur,kanker);
-        addLine(raipur,kondagaon);
-        addLine(raipur,korba);
-        addLine(raipur,korea);
-        addLine(raipur,mahasamund);
-        addLine(raipur,mungeli);
-        addLine(raipur,narayanpur);
-        addLine(raipur,raigarh);
-}
-if(selectedValue==6){
-  addLine(North_goa,South_goa);
-}
-if (selectedValue==8){
-  addLine(Jind,ambala);
-  addLine(Jind,bhiwani);
-  addLine(Jind,Ccarkhi_Dadri);
-  addLine(Jind,faridabad);
-  addLine(Jind,fatehabad);
-  addLine(Jind,gurugram);
-  addLine(Jind,Hisar);
-  addLine(Jind,Jhajjar);
-  addLine(Jind,Kaithal);
-  addLine(Jind,Karnal);
-  addLine(Jind,Kurukshetra);
-  addLine(Jind,Mahendragarh);
-  addLine(Jind,Nuh);
-  addLine(Jind,Palwal);
-  addLine(Jind,Panchkula);
-  addLine(Jind,Panipat);
-  addLine(Jind,Rewari);
-  addLine(Jind,Rohtak);
-  addLine(Jind,Sirsa);
-  addLine(Jind,Sonipat);
-  addLine(Jind,Yamunanagar);
-}
+        else if (selectedValue==10){
+            addLine(Dhanbad,Bokaro);
+            addLine(Dhanbad,Deoghar);
+            addLine(Dhanbad,Chatra);
+            addLine(Dhanbad,Dumka);
+            addLine(Dhanbad,EastSinghbhum);
+            addLine(Dhanbad,Garhwa);
+            addLine(Dhanbad,Giridih);
+            addLine(Dhanbad,Gumla);
+            addLine(Dhanbad,Hazaribag);
+            addLine(Dhanbad,Jamtara);
+            addLine(Dhanbad,Khunti);
+            addLine(Dhanbad,Koderma);
+            addLine(Dhanbad,Ranchi);
+            addLine(Dhanbad,Sahibganj);
+            addLine(Dhanbad,WestSinghbhum);
+            
+
+        }
 
         // Add plane
         var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();
@@ -396,7 +334,7 @@ if (selectedValue==8){
         plane.height = 48;
 
         plane.adapter.add("scale", function(scale, target) {
-            return 0.05 * (1 - (Math.abs(0.5 - target.position)));
+            return 0.5 * (1 - (Math.abs(0.5 - target.position)));
         })
 
         var planeImage = plane.createChild(am4core.Sprite);
@@ -413,7 +351,7 @@ if (selectedValue==8){
         shadowPlane.height = 48;
 
         var shadowPlaneImage = shadowPlane.createChild(am4core.Sprite);
-        shadowPlaneImage.scale = 0.01;
+        shadowPlaneImage.scale = 0.05;
         shadowPlaneImage.horizontalCenter = "middle";
         shadowPlaneImage.verticalCenter = "middle";
         shadowPlaneImage.path = "m2,106h28l24,30h72l-44,-133h35l80,132h98c21,0 21,34 0,34l-98,0 -80,134h-35l43,-133h-71l-24,30h-28l15,-47";

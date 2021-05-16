@@ -76,11 +76,42 @@
             city.tooltipText = title;
             return city;
         }
+        var Bhopal = addCity({ "latitude": 23.2599, "longitude": 77.4126 }, "Bhopal");
+        var Amaravati = addCity({ "latitude": 16.5131, "longitude": 80.5165 }, "Amaravati");
+        var Itanagar = addCity({ "latitude": 27.0844, "longitude": 93.6053 }, "Itanagar");
+        var Dispur = addCity({ "latitude": 26.1433, "longitude": 91.7898 }, "Dispur");
+        var Patna = addCity({ "latitude": 25.5941, "longitude": 85.1376 }, "Patna");
+        var Raipur = addCity({ "latitude": 21.2514, "longitude": 81.6296 }, "Raipur");
+        var Panaji = addCity({ "latitude": 15.4909, "longitude": 73.8278 }, "Panaji");
+        var Gandhinagar = addCity({ "latitude": 23.2156, "longitude": 72.6369 }, "Gandhinagar");
+        var Chandigarh = addCity({ "latitude": 30.7333, "longitude": 76.7794 }, "Chandigarh");
+        var Shimla = addCity({ "latitude": 31.1048, "longitude": 77.1734 }, "Shimla");
+        var Ranchi = addCity({ "latitude": 23.3441, "longitude": 85.3096 }, "Ranchi");
+        var Bengaluru = addCity({ "latitude": 12.9716, "longitude": 77.5946 }, "Bengaluru");
+        var Thiruvananthapuram = addCity({ "latitude": 8.5241, "longitude":  76.9366 }, "Thiruvananthapuram");
+        var Mumbai = addCity({ "latitude": 19.076, "longitude": 72.8777 }, "Mumbai");
+        var Imphal = addCity({ "latitude": 24.817, "longitude": 93.9368 }, "Imphal");
+        var Shillong = addCity({ "latitude": 25.5788, "longitude": 91.8933 }, "Shillong");
+        var Aizawl = addCity({ "latitude": 23.7307, "longitude": 92.7173 }, "Aizawl");
+        var Kohima = addCity({ "latitude": 25.6751, "longitude": 94.1086 }, "Kohima");
+        var Bhubaneswar = addCity({ "latitude": 20.2961, "longitude": 85.8245}, "Bhubaneswar");
+        var Chandigarh = addCity({ "latitude": 30.7333, "longitude": 76.7794 }, "Chandigarh");
+        var Jaipur = addCity({ "latitude": 26.9124, "longitude": 75.7873 }, "Jaipur");
+        var Gangtok = addCity({ "latitude": 27.3314, "longitude": 88.6138 }, "Gangtok");
+        var Chennai = addCity({ "latitude": 13.0825, "longitude": 80.275 }, "Chennai");
+        var Hyderabad = addCity({ "latitude": 17.385, "longitude": 78.4867 }, "Hyderabad");
+        var Agartala = addCity({ "latitude": 23.8315, "longitude": 91.2868 }, "Agartala");
+        var Lucknow = addCity({ "latitude":26.8467, "longitude": 80.9462}, "Lucknow");
+        var Dehradun = addCity({ "latitude": 30.3165, "longitude": 78.0322 }, "Dehradun");
+        var Kolkata = addCity({ "latitude": 22.5411, "longitude":88.3378 }, "Kolkata");
         
-        var paris = addCity({ "latitude": 48.8567, "longitude": 2.3510 }, "Paris");
+
+
+        
+        /* var paris = addCity({ "latitude": 48.8567, "longitude": 2.3510 }, "Paris");
         var toronto = addCity({ "latitude": 43.8163, "longitude": -79.4287 }, "Toronto");
         var la = addCity({ "latitude": 34.3, "longitude": -118.15 }, "Los Angeles");
-        var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana");
+        var havana = addCity({ "latitude": 23, "longitude": -82 }, "Havana"); */
         
         // Add lines
         var lineSeries = chart.series.push(new am4maps.MapArcSeries());
@@ -88,7 +119,7 @@
         lineSeries.mapLines.template.line.strokeOpacity = 0.5;
         lineSeries.mapLines.template.line.stroke = city.fill;
         lineSeries.mapLines.template.line.nonScalingStroke = true;
-        lineSeries.mapLines.template.line.strokeDasharray = "1,1";
+        lineSeries.mapLines.template.line.strokeDasharray = "0.2,0.2";
         lineSeries.zIndex = 10;
         
         var shadowLineSeries = chart.series.push(new am4maps.MapLineSeries());
@@ -100,7 +131,7 @@
         function addLine(from, to) {
             var line = lineSeries.mapLines.create();
             line.imagesToConnect = [from, to];
-            line.line.controlPointDistance = -0.3;
+            line.line.controlPointDistance = -0.1;
         
             var shadowLine = shadowLineSeries.mapLines.create();
             shadowLine.imagesToConnect = [from, to];
@@ -108,9 +139,38 @@
             return line;
         }
         
-        addLine(paris, toronto);
-        addLine(toronto, la);
-        addLine(la, havana);
+        addLine(Bhopal, Amaravati);
+        addLine(Bhopal, Itanagar);
+        addLine(Bhopal, Dispur);
+        addLine(Bhopal, Patna);
+        addLine(Bhopal, Raipur);
+        addLine(Bhopal, Panaji);
+        addLine(Bhopal, Gandhinagar);
+        addLine(Bhopal, Chandigarh);
+        addLine(Bhopal, Shimla);
+        addLine(Bhopal, Ranchi);
+        addLine(Bhopal, Bengaluru);
+        addLine(Bhopal, Thiruvananthapuram);
+        addLine(Bhopal, Mumbai);
+        addLine(Bhopal, Imphal);
+        addLine(Bhopal, Shillong);
+        addLine(Bhopal, Aizawl);
+        addLine(Bhopal, Kohima);
+        addLine(Bhopal, Bhubaneswar);
+        addLine(Bhopal, Chandigarh);
+        addLine(Bhopal, Jaipur);
+        addLine(Bhopal, Gangtok);
+        addLine(Bhopal, Chennai);
+        addLine(Bhopal, Hyderabad);
+        addLine(Bhopal, Agartala);
+        addLine(Bhopal, Lucknow);
+        addLine(Bhopal, Dehradun);
+        addLine(Bhopal, Kolkata);
+ 
+ 
+        
+        /* addLine(toronto, la);
+        addLine(la, havana); */
         
         // Add plane
         var plane = lineSeries.mapLines.getIndex(0).lineObjects.create();
@@ -119,7 +179,7 @@
         plane.height = 48;
         
         plane.adapter.add("scale", function(scale, target) {
-            return 0.5 * (1 - (Math.abs(0.5 - target.position)));
+            return 0.15 * (1 - (Math.abs(0.5 - target.position)));
         })
         
         var planeImage = plane.createChild(am4core.Sprite);
@@ -144,8 +204,8 @@
         shadowPlaneImage.strokeOpacity = 0;
         
         shadowPlane.adapter.add("scale", function(scale, target) {
-            target.opacity = (0.6 - (Math.abs(0.5 - target.position)));
-            return 0.5 - 0.3 * (1 - (Math.abs(0.5 - target.position)));
+            target.opacity = (0.3 - (Math.abs(0.5 - target.position)));
+            return 0.5 - 0.4 * (1 - (Math.abs(0.5 - target.position)));
         })
         
         // Plane animation
@@ -478,55 +538,219 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        
                                         <tr>
                                             <td>1</td>
-                                            <td class="txt-oflo">Maharashtra</td>
-                                            <td>Nagpur</td>
-                                            <td class="txt-oflo">36</td>
-                                            <td><span class="text-success">Mumbai</span></td>
+                                            <td class="txt-oflo">Andhra Pradesh</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">13</td>
+                                            <td><span class="text-success">Hyderabad </span></td>
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td class="txt-oflo">Real Homes WP Theme</td>
-                                            <td>EXTENDED</td>
-                                            <td class="txt-oflo">April 19, 2021</td>
-                                            <td><span class="text-info">$1250</span></td>
+                                            <td class="txt-oflo">Arunachal Pradesh</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">25</td>
+                                            <td><span class="text-success">Itanagar</span></td>
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td class="txt-oflo">Ample Admin</td>
-                                            <td>EXTENDED</td>
-                                            <td class="txt-oflo">April 19, 2021</td>
-                                            <td><span class="text-info">$1250</span></td>
+                                            <td class="txt-oflo">Assam</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">34</td>
+                                            <td><span class="text-success">Dispur</span></td>
                                         </tr>
                                         <tr>
                                             <td>4</td>
-                                            <td class="txt-oflo">Medical Pro WP Theme</td>
-                                            <td>TAX</td>
-                                            <td class="txt-oflo">April 20, 2021</td>
-                                            <td><span class="text-danger">-$24</span></td>
+                                            <td class="txt-oflo">Bihar </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">38</td>
+                                            <td><span class="text-success">Patna</span></td>
                                         </tr>
                                         <tr>
                                             <td>5</td>
-                                            <td class="txt-oflo">Hosting press html</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 21, 2021</td>
-                                            <td><span class="text-success">$24</span></td>
+                                            <td class="txt-oflo">Chhattisgarh</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">28</td>
+                                            <td><span class="text-success">Raipur</span></td>
                                         </tr>
                                         <tr>
                                             <td>6</td>
-                                            <td class="txt-oflo">Digital Agency PSD</td>
-                                            <td>SALE</td>
-                                            <td class="txt-oflo">April 23, 2021</td>
-                                            <td><span class="text-danger">-$14</span></td>
+                                            <td class="txt-oflo">Chhattisgarh </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">28</td>
+                                            <td><span class="text-success">Raipur </span></td>
                                         </tr>
                                         <tr>
                                             <td>7</td>
-                                            <td class="txt-oflo">Helping Hands WP Theme</td>
-                                            <td>MEMBER</td>
-                                            <td class="txt-oflo">April 22, 2021</td>
-                                            <td><span class="text-success">$64</span></td>
+                                            <td class="txt-oflo">Gujarat </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">33</td>
+                                            <td><span class="text-success">Gandhinagar </span></td>
                                         </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td class="txt-oflo">Haryana  </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">22</td>
+                                            <td><span class="text-success">Chandigarh </span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td class="txt-oflo">Himachal Pradesh</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">12</td>
+                                            <td><span class="text-success">Shimla</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td class="txt-oflo">Jharkhand</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">24</td>
+                                            <td><span class="text-success">Ranchi</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td class="txt-oflo">Karnataka </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">31</td>
+                                            <td><span class="text-success">Bengaluru </span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td class="txt-oflo">Kerala  </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">14</td>
+                                            <td><span class="text-success">Thiruvananthapuram </span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td class="txt-oflo">Madhya Pradesh  </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">55</td>
+                                            <td><span class="text-success">Bhopal </span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td class="txt-oflo">Maharashtra </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">36</td>
+                                            <td><span class="text-success">Mumbai </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td class="txt-oflo">Manipur </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">16</td>
+                                            <td><span class="text-success">Imphal </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td class="txt-oflo">Meghalaya </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">11</td>
+                                            <td><span class="text-success">Shillong </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td class="txt-oflo">Mizoram</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">11</td>
+                                            <td><span class="text-success">Aizawl </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td class="txt-oflo">Nagaland</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">12</td>
+                                            <td><span class="text-success">Kohima  </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td class="txt-oflo">Odisha</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">30</td>
+                                            <td><span class="text-success">Bhubaneswar </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td class="txt-oflo">Punjab</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">22</td>
+                                            <td><span class="text-success">Chandigarh </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>21</td>
+                                            <td class="txt-oflo">Rajasthan </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">33</td>
+                                            <td><span class="text-success">Jaipur  </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>22</td>
+                                            <td class="txt-oflo">Sikkim </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">4</td>
+                                            <td><span class="text-success">Gangtok</span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>23</td>
+                                            <td class="txt-oflo">Tamil Nadu </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">38</td>
+                                            <td><span class="text-success">Chennai </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>24</td>
+                                            <td class="txt-oflo">Telangana  </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">33</td>
+                                            <td><span class="text-success">Hyderabad </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>25</td>
+                                            <td class="txt-oflo">Tripura</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">8</td>
+                                            <td><span class="text-success">Agartala  </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>26</td>
+                                            <td class="txt-oflo">Uttar Pradesh</td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">75</td>
+                                            <td><span class="text-success">Lucknow </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>27</td>
+                                            <td class="txt-oflo">Uttarakhand </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">13</td>
+                                            <td><span class="text-success">Dehradun </span></td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td>28</td>
+                                            <td class="txt-oflo">West Bengal </td>
+                                            <td>C</td>
+                                            <td class="txt-oflo">23</td>
+                                            <td><span class="text-success">Kolkata </span></td>
+                                            
+                                        </tr>
+                                        
                                     </tbody>
                                 </table>
                             </div>
